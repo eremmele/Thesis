@@ -107,7 +107,7 @@ h6 { font-size: 1.2rem; line-height: auto;  letter-spacing: 0; }
   align-items: center;
   align-self: flex-end;
   padding-left: 5%;
-  padding-top: 5px;
+  padding-top: .5%;
 }
 
 /* Larger than phablet */
