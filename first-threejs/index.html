@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <title>test three.js</title>
+
+       	<style type="text/css">
+
+   	   body {
+   	   margin: 0;
+   	   }
+
+   	   canvas {
+   	   width: 100%;
+   	   height: 100%; }
+
+   </head>
+
+   <body>
+
+      	   <script src="three.min.js"></script>
+
+      	   <script>
+      	       var scene = new THREE.Scene() ;
+
+      	       var camera = new THREE.PerspectiveCamera(45, Window.innerWidth / window.innerHeight, 0.1, 1000);
+
+      	       var render = new THREE.WebGLRenderer();
+
+      	       render.setSize(window.innerWidth, window.innerHeight);
+
+      	       document.body.appendChild(render.domElement);
+
+      	       var geometry = new THREE.BoxGeometry(1,1,1);
+      	       var material = new THREE.MeshBasicMaterial((color: 0x00ff00));
+      	       var cube = new THREE.mesh(geometry, material);
+      	       scene.add(cube);
+      	       camera.position.z = 5;
+
+      	       var render = function() {
+      	       		requestAnimationFrame(render);
+      	       		cube.rotation.x += 0.1;
+      	       		cube.rotation.y += 0.1;
+
+      	       		render.render(scene, camera);
+
+      	       	};
+      	       	render();
+
+      	   </script>
+
+  
+
+   </body>
+
+</html>
