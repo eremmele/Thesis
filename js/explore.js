@@ -130,31 +130,31 @@ if(ratio == 2){
     canvas.style.height='100%';
 }
 
-var GUIControls = {
-    holeSize: holeSize,
-    rotationDistance: rotationDistance,
-    rotationSpeed: rotationSpeed,
-    spawnCount: spawnCount,
-    rotationStep: rotationStep,
-    randomize: randomize,
-    reset: function() {
-        holeSize = 100
-        rotationDistance = 200
-        rotationSpeed = 1
-        spawnCount = 20
-        rotationStep = 37
-        randomize = true
-    }
-}
+//var GUIControls = {
+//    holeSize: holeSize,
+//    rotationDistance: rotationDistance,
+//    rotationSpeed: rotationSpeed,
+//    spawnCount: spawnCount,
+//    rotationStep: rotationStep,
+//    randomize: randomize,
+//    reset: function() {
+//        holeSize = 100
+//        rotationDistance = 200
+//        rotationSpeed = 1
+//        spawnCount = 20
+//        rotationStep = 37
+//        randomize = true
+//    }
+//}
 
-var datGUI = new dat.GUI()
+//var datGUI = new dat.GUI()
 
-datGUI.add(GUIControls, 'holeSize').min(0).max(1000).step(1).name('Hole Size').listen().onChange(function(val){ holeSize = val })
-datGUI.add(GUIControls, 'rotationDistance').min(0).max(500).step(1).name('Rotation Distance').listen().onChange(function(val){ rotationDistance = val })
-datGUI.add(GUIControls, 'rotationSpeed').min(0).max(5).name('Rotation Speed').listen().onChange(function(val){ rotationSpeed = val })
-datGUI.add(GUIControls, 'rotationStep').min(-100).max(100).name('Rotation Step').listen().onChange(function(val){ rotationStep = val })
-datGUI.add(GUIControls, 'spawnCount').min(1).max(100).name('Spawn Count').listen().onChange(function(val){ spawnCount = val })
-datGUI.add(GUIControls, 'randomize', true, false).name('Randomize').onChange(function(val){ randomize = val })
-datGUI.add(GUIControls, 'reset').name('Reset')
+//datGUI.add(GUIControls, 'holeSize').min(0).max(1000).step(1).name('Hole Size').listen().onChange(function(val){ holeSize = val })
+//datGUI.add(GUIControls, 'rotationDistance').min(0).max(500).step(1).name('Rotation Distance').listen().onChange(function(val){ rotationDistance = val })
+//datGUI.add(GUIControls, 'rotationSpeed').min(0).max(5).name('Rotation Speed').listen().onChange(function(val){ rotationSpeed = val })
+//datGUI.add(GUIControls, 'rotationStep').min(-100).max(100).name('Rotation Step').listen().onChange(function(val){ rotationStep = val })
+//datGUI.add(GUIControls, 'spawnCount').min(1).max(100).name('Spawn Count').listen().onChange(function(val){ spawnCount = val })
+//datGUI.add(GUIControls, 'randomize', true, false).name('Randomize').onChange(function(val){ randomize = val })
+//datGUI.add(GUIControls, 'reset').name('Reset')
 
-datGUI.domElement.querySelector('ul').classList.toggle('closed')
+//datGUI.domElement.querySelector('ul').classList.toggle('closed')
