@@ -16,7 +16,7 @@ html, body {
 
 html {
   font-size: 62.5%; 
-  background-color: #000;
+  /*background-color: #000;*/
   font-color: #fff;
 }
 body {
@@ -24,7 +24,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #fff; 
   background-color: #000;
-    overflow: hidden;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -65,17 +65,22 @@ nav ul li {
   display: inline-block;
   padding: 0 3em;
   line-height: 3em;
+  -webkit-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  -o-transition: all .25s ease-in;
+  transition: all .25s ease-in;
 }
 
 nav ul li:hover {
-  letter-spacing: .5rem; 
+  letter-spacing: 15rem; /*5 before*/ 
   transform: scale(1.1);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease; 
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out; 
   cursor: pointer
 }
+/* look at letter spacing/disorienting
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -493,4 +498,140 @@ h1 {
     -webkit-transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
             transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
   }
+}
+
+
+
+
+/* ----------- CIRCLE ROTATING DOTS ------------------ */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7, 0.7);
+            transform: rotate(0deg) scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1, 1);
+            transform: rotate(180deg) scale(1, 1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.7, 0.7);
+            transform: rotate(360deg) scale(0.7, 0.7);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7, 0.7);
+            transform: rotate(0deg) scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: rotate(180deg) scale(1, 1);
+            transform: rotate(180deg) scale(1, 1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.7, 0.7);
+            transform: rotate(360deg) scale(0.7, 0.7);
+  }
+}
+@-webkit-keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7, 0.7);
+            transform: rotate(0deg) scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: rotate(-180deg) scale(1, 1);
+            transform: rotate(-180deg) scale(1, 1);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg) scale(0.7, 0.7);
+            transform: rotate(-360deg) scale(0.7, 0.7);
+  }
+}
+@keyframes spin2 {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7, 0.7);
+            transform: rotate(0deg) scale(0.7, 0.7);
+  }
+  50% {
+    -webkit-transform: rotate(-180deg) scale(1, 1);
+            transform: rotate(-180deg) scale(1, 1);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg) scale(0.7, 0.7);
+            transform: rotate(-360deg) scale(0.7, 0.7);
+  }
+}
+.dots {
+  width: 200px;
+  height: 200px;
+  box-shadow: -104px 0 0 -98px #aaeaff, -104px 0 0 -97px rgba(0, 190, 255, 0.5), -104px 0 5px -97px #00beff, 0 -104px 0 -98px #aaeaff, 0 -104px 0 -97px rgba(0, 190, 255, 0.5), 0 -104px 5px -97px #00beff, 0 0 6px 4px #111, 0 0 6px 5px rgba(0, 165, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.dots:before, .dots:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  box-shadow: -104px 0 0 -98px #aaeaff, -104px 0 0 -97px rgba(0, 190, 255, 0.5), -104px 0 5px -97px #00beff, 104px 0 0 -98px #aaeaff, 104px 0 0 -97px rgba(0, 190, 255, 0.5), 104px 0 5px -97px #00beff, 0 104px 0 -98px #aaeaff, 0 104px 0 -97px rgba(0, 190, 255, 0.5), 0 104px 5px -97px #00beff;
+}
+.dots:before {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+.dots:after {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.dots2 {
+  width: 220px;
+  height: 220px;
+  box-shadow: -114px 0 0 -108px #aaeaff, -114px 0 0 -107px rgba(0, 190, 255, 0.5), -114px 0 5px -107px #00beff, 114px 0 0 -108px #aaeaff, 114px 0 0 -107px rgba(0, 190, 255, 0.5), 114px 0 5px -107px #00beff, 0 -114px 0 -108px #aaeaff, 0 -114px 0 -107px rgba(0, 190, 255, 0.5), 0 -114px 5px -107px #00beff, 0 0 6px 4px #111, 0 0 6px 5px rgba(0, 165, 255, 0.2);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-animation: spin2 3s linear infinite;
+          animation: spin2 3s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.dots2:before, .dots2:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  box-shadow: -114px 0 0 -108px #aaeaff, -114px 0 0 -107px rgba(0, 190, 255, 0.5), -114px 0 5px -107px #00beff, 114px 0 0 -108px #aaeaff, 114px 0 0 -107px rgba(0, 190, 255, 0.5), 114px 0 5px -107px #00beff, 0 114px 0 -108px #aaeaff, 0 114px 0 -107px rgba(0, 190, 255, 0.5), 0 114px 5px -107px #00beff;
+}
+.dots2:before {
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+.dots2:after {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
 }

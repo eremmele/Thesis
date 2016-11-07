@@ -31,6 +31,7 @@
     <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
+    <script src="THREEx.WindowResize.js"></script>
 </head>
 
 <body>
@@ -43,44 +44,25 @@
 
         <nav>
           <ul class="nav">
-            <li><a href="about.html">about</a></li>
             <li><a href="index.html">home</a></li>
-            <!--<li><a href="explore.html">explore</a></li>-->
+            <li><a href="explore.html">explore</a></li>
+            <li><a href="about.html">about</a></li>
           </ul>
         </nav>
 
 
     <!-- \\\\\\\\\\\\\\\\\\\\\\\\ dot navigation //////////////////////// -->
 
-      <div class="dotstyle-background">  
-        <div class="dotstyle dotstyle-drawcircle">
-          <ul>
-            <li>  <a href="explore.html">testing</a>  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg></li>
-
-            <li><a href="explore-2.html">testing 2</a>   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg></li>
-
-            <li class="current"><a href="explore-3.html">  </a><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg></li>
-
-            <li><a href="#">  </a><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg></li>
-
-            <li><a href="#">  </a><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg></li>
-
-            <li><a href="#">  </a><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg></li>
-          </ul>
-        </div>
-
-    <script src="js/dots.js"></script>
-    <script>
-      [].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
-        new DotNav( nav, {
-          callback : function( idx ) {
-            //console.log( idx )
-          }
-        } );
-      } );
-    </script>
-  </div>
-</div>
+    <div class="body">
+            <ul>
+              <li class="dot"><a href="explore.html"><div class="inner dot"> </div></a></li>
+              <li class="dot"><a href="explore-2.html"><div class="inner dot"> </div></a></li>
+              <li class="dot"><a href="explore-3.html"><div class="inner dot currentLink"> </div></a></li>
+              <li class="dot"><a href="#"><div class="inner dot"> </div></a></li>
+              <li class="dot"><a href="#"><div class="inner dot"> </div></a></li>
+              <li class="dot"><a href="#"><div class="inner dot"> </div></a></li>
+            </ul>
+    </div>
 
 <!--//////////////////////////// Main Attraction //////////////////////////////////-->
     <canvas id="c" class="z-index:10000;"> </canvas>

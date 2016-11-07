@@ -108,6 +108,8 @@ function render(){
     stars = bench.slice(0).reverse();
 }
 
+
+//requestAnimationFrame for battery-friendly animating
 window.requestAnimFrame = (function(){
     return  window.requestAnimationFrame   ||
         window.webkitRequestAnimationFrame ||
