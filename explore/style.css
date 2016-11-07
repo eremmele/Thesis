@@ -8,3 +8,14 @@ canvas:hover {
 }
 
 
+button {
+  position: absolute;
+  float: left;
+  display: inline;
+  top: 20px;
+  left: 20px;
+}
+
+#stop {
+  left: 100px;
+}

@@ -1,7 +1,7 @@
 var holeSize = 100; // size of the black hole.
 var rotationDistance = 200; // distance of black hole from canvas center.
 var rotationSpeed = .25; // speed of black hole rotation.
-var spawnCount = 20;  // the amount of stars to spawn every frame.
+var spawnCount = 15;  // the amount of stars to spawn every frame. ORIG 20
 var rotationStep = 37;
 
 // ---------------------------------------------
@@ -11,8 +11,8 @@ var canvas = document.getElementById('c'),
     stars = [],
     m = {},
     r = 0,
-    accel = 1.01,
-    accel2 = 0.001,
+    accel = 1.001, //1.01
+    accel2 = 0.0001, // 0.001
     ratio = window.devicePixelRatio || 1,
     spawnPos = 0,
     randomize = true
@@ -108,14 +108,13 @@ function render(){
     stars = bench.slice(0).reverse();
 }
 
-
 //requestAnimationFrame for battery-friendly animating
 window.requestAnimFrame = (function(){
     return  window.requestAnimationFrame   ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame    ||
         function(callback){
-            window.setTimeout(callback, 1000 / 60);
+        window.setTimeout(callback, 1000 / 60);
         };
 })();
 
@@ -125,12 +124,11 @@ window.requestAnimFrame = (function(){
 })();
 
 
-
-
 if(ratio == 2){
 	canvas.style.width='100%';
     canvas.style.height='100%';
 }
+
 
 //var GUIControls = {
 //    holeSize: holeSize,
@@ -160,3 +158,4 @@ if(ratio == 2){
 //datGUI.add(GUIControls, 'reset').name('Reset')
 
 //datGUI.domElement.querySelector('ul').classList.toggle('closed')
+
