@@ -5,10 +5,11 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Thesis Title Here</title>
+  <title>OverThere.Explore</title>
   <meta name="description" content="">
   <meta name="author" content="Erica Remmele">
   <meta http-equiv="refresh" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -27,7 +28,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/er_logo2.ico">
+  <link rel="icon" type="image/png" href="assets/circle.ico">
 
     <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -35,13 +36,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
   <script src="THREEx.WindowResize.js"></script>
   <script src="button.js"></script>
-  <script src="fullscreen.js"></script>
 
-   <!--\\\\\\\\\\\\\\\\\\\\\\\\fullscreen////////////////////////--> 
-  <script>
-    function fullwin(){
-    window.open("index.html","fs","fullscreen=yes")}
-  </script>
 </head>
 
 <body>
@@ -60,6 +55,16 @@
         </nav>
 
 
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\fullscreen////////////////////////--> 
+    <img src="assets/fullscreen.svg" id="fullscreen">
+        <script>
+            document.addEventListener("keydown", function (evt) {
+            console.log("keydown. You pressed the " + evt.keyCode + " key")
+            }, false);
+        </script>
+    <script src="js/fullscreen.js"></script>
+
+
     <!-- \\\\\\\\\\\\\\\\\\\\\\\\ dot navigation //////////////////////// -->
     <div class="body">
             <ul>
@@ -72,9 +77,6 @@
             </ul>
 
     </div>
-    <form>
-      <input type="image" src="assets/fullscreen.svg" onClick="fullwin()" value="Open Full Screen Window" class="fullscreen">
-    </form>
 
 
 

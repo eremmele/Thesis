@@ -42,14 +42,23 @@
   <!--<div class="container">-->
 
    <!--\\\\\\\\\\\\\\\\\\\\\\\\navigation here////////////////////////--> 
-
         <nav>
           <ul class="nav">
-            <li><a href="about.html">about</a></li>
-            <!--<li><a href="index.html">thesis site title</a></li>-->
+            <!--<li><a href="index.html">home</a></li>-->
             <li><a href="explore.html">explore</a></li>
+            <li><a href="about.html">about</a></li>
           </ul>
         </nav>
+
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\fullscreen////////////////////////--> 
+    <img src="assets/fullscreen.svg" id="fullscreen">
+        <script>
+            document.addEventListener("keydown", function (evt) {
+            console.log("keydown. You pressed the " + evt.keyCode + " key")
+            }, false);
+        </script>
+    <script src="js/fullscreen.js"></script>
 
 
 <!--//////////////////////////// Main Attraction //////////////////////////////////-->

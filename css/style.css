@@ -78,12 +78,12 @@ nav ul li:hover {
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out; 
-  cursor: pointer
+  cursor: pointer;
 }
 /* look at letter spacing/disorienting
 
 /*fullscreen*/
-.fullscreen {
+#fullscreen {
   border-style: none;
   width: 32px;
   background: none;
@@ -95,19 +95,23 @@ nav ul li:hover {
   margin: 0 auto;
   float: right;
   padding: 8px 8px 0 0;
+  cursor: pointer;
 }
 
-.fullscreen:hover {
+#fullscreen:hover {
   opacity: .9;
+  cursor: pointer;
 }
 
-.fullscreen:active {
+#fullscreen:active {
   outline: none !important;
   border:none;
   border-style:none;
+  cursor: pointer;
 }
-.fullscreen:focus {
+#fullscreen:focus {
   outline: none;
+  cursor: pointer;
 }
 
 /* Typography
@@ -122,6 +126,13 @@ h3 { font-size: 24px; line-height: 1.2;  letter-spacing: 1px; }
 /*h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; } */
 h6 { font-size: 1.2rem; line-height: auto;  letter-spacing: 0; }
+
+.about-text {
+  text-align: left;
+  max-width: 42%;
+  padding-left: 5%;
+  padding-top: 5%;
+}
 
 .center-text {
   text-align: left;
@@ -168,6 +179,46 @@ a {
 
 a:hover {
   color: #cbcbcb; }
+
+
+/* Resources
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#research {
+  clear: all;
+  color: #fff;
+  position:relative;
+  cursor: pointer;
+}
+#research:link{
+  text-decoration:underline;
+  position:relative;
+}
+#research:hover{
+  position:relative;
+  opacity: .5;
+}
+
+#research-div {
+  display: inline-block;
+}
+#resources {
+  /*outline: solid rgba(0,0,0,1) 15px;*/
+  border: solid black 15px;
+  /*margin-top: 15px;*/
+  margin-left: -15px;
+  width: 500px;
+  font-size: 1.2rem; 
+  line-height: auto;  
+  letter-spacing: 0;
+  opacity: 1;
+  background: #000;
+  list-style-type: none;
+  position: absolute;
+  display: none;
+}
+#research-div:hover #resources {
+  display: block;
+}
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -274,6 +325,10 @@ hr {
   display: table;
   clear: both; }
 
+.clear {
+  clear: all;
+}
+
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -306,7 +361,7 @@ there.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .title {
-  color: #fff
+  color: #fff;
   display: flex;
   display: -webkit-box;
   display: -moz-box;
