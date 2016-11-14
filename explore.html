@@ -35,6 +35,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js"></script>
   <script src="THREEx.WindowResize.js"></script>
   <script src="button.js"></script>
+  <script src="fullscreen.js"></script>
+
+   <!--\\\\\\\\\\\\\\\\\\\\\\\\fullscreen////////////////////////--> 
+  <script>
+    function fullwin(){
+    window.open("index.html","fs","fullscreen=yes")}
+  </script>
 </head>
 
 <body>
@@ -44,7 +51,6 @@
   <!--<div class="container">-->
 
    <!--\\\\\\\\\\\\\\\\\\\\\\\\navigation here////////////////////////--> 
-
         <nav>
           <ul class="nav">
             <li><a href="index.html">home</a></li>
@@ -52,6 +58,7 @@
             <li><a href="about.html">about</a></li>
           </ul>
         </nav>
+
 
     <!-- \\\\\\\\\\\\\\\\\\\\\\\\ dot navigation //////////////////////// -->
     <div class="body">
@@ -63,7 +70,12 @@
               <li class="dot"><a href="#"><div class="inner dot"> </div></a></li>
               <li class="dot"><a href="#"><div class="inner dot"> </div></a></li>
             </ul>
+
     </div>
+    <form>
+      <input type="image" src="assets/fullscreen.svg" onClick="fullwin()" value="Open Full Screen Window" class="fullscreen">
+    </form>
+
 
 
 <!--//////////////////////////// Main Attraction //////////////////////////////////-->
@@ -81,8 +93,8 @@
     THREEx.WindowResize(renderer, camera);
     </script>  -->
 
-<button id="start">start</button>
-<button id="stop">stop</button>
+<!--<button id="start">start</button>
+<button id="stop">stop</button>-->
 
 <!--//////////////////////////////////////////////////////////////-->
   

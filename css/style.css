@@ -82,6 +82,34 @@ nav ul li:hover {
 }
 /* look at letter spacing/disorienting
 
+/*fullscreen*/
+.fullscreen {
+  border-style: none;
+  width: 32px;
+  background: none;
+  opacity: .5;
+  position: absolute;
+  z-index: 9999;
+  text-align: right;
+  right: 0;
+  margin: 0 auto;
+  float: right;
+  padding: 8px 8px 0 0;
+}
+
+.fullscreen:hover {
+  opacity: .9;
+}
+
+.fullscreen:active {
+  outline: none !important;
+  border:none;
+  border-style:none;
+}
+.fullscreen:focus {
+  outline: none;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
@@ -209,8 +237,7 @@ table,
 p,
 ul,
 ol,
-form {
-  margin-bottom: 2.5rem; }
+form {}
 
 
 /* Utilities
