@@ -21,3 +21,6 @@ button {
   left: 100px;
 }
 
+#overlay {
+	opacity: .9;
+}

@@ -49,7 +49,7 @@ nav {
   color: #bbb;
   background-color:rgba(0, 0, 0, 0);
   font-weight: bold;
-  letter-spacing: 0.025em;
+  /*letter-spacing: 0.025em;*/
   position: fixed;
   bottom: 0;
   z-index: 9999;
@@ -112,6 +112,27 @@ nav ul li:hover {
 #fullscreen:focus {
   outline: none;
   cursor: pointer;
+}
+#fullscreen:visited {
+  opacity: 0;
+}
+
+#mute {
+  border-style: none;
+  width: auto;
+  background: none;
+  opacity: .5;
+  position: absolute;
+  z-index: 9999;
+  text-align: right;
+  right: 32px;
+  margin: 0 auto;
+  float: right;
+  padding: 6px 7px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  font-size: 12px;
 }
 
 /* Typography
@@ -178,7 +199,7 @@ a {
 }
 
 a:hover {
-  color: #cbcbcb; }
+  color: #ffffff; }
 
 
 /* Resources
@@ -219,6 +240,52 @@ a:hover {
 #research-div:hover #resources {
   display: block;
 }
+
+/* Quote
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.quote-adjust {
+  font-size: 14px;
+  z-index: 9999;
+}
+
+.quote-link {
+  clear: all;
+  color: #fff;
+  position:relative;
+  cursor: pointer;
+  text-decoration:underline;
+}
+.quote-link:link{
+  text-decoration:underline;
+  position:relative;
+}
+.quote-link:hover{
+  position:relative;
+  opacity: .5;
+  text-decoration:line-through;
+}
+
+.quote-div {
+  display: inline-block;
+}
+
+.quote {
+  /*outline: solid rgba(0,0,0,1) 15px;*/
+  /*margin-top: 15px;*/
+  width: auto;
+  font-size: 14px; 
+  line-height: auto;  
+  letter-spacing: 0;
+  opacity: 1;
+  background: rgba (255,255,255,.9);
+  list-style-type: none;
+  position: absolute;
+  display: none;
+}
+.quote-div:hover .quote {
+  display: block;
+}
+
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -716,4 +783,68 @@ h1 {
 .dots2:after {
   -webkit-transform: rotate(120deg);
           transform: rotate(120deg);
+}
+
+
+/* -------------------- fade in explore 6 ------------------------ */
+    
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+h2 {
+  width: 30%;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+
+            animation: fadeinout 15s linear forwards;
+    -webkit-animation: fadeinout 15s linear forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeinout 15s linear forwards; /* Firefox < 16 */
+        -ms-animation: fadeinout 15s linear forwards; /* Internet Explorer */
+         -o-animation: fadeinout 15s linear forwards; /* Opera < 12.1 */
+            animation: fadeinout 15s linear forwards;
+
+  opacity: 1;
+}
+
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
 }

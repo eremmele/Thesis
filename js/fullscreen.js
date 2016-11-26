@@ -79,4 +79,5 @@
             }
         }, false);
     }
+    document.getElementById("toggle").style.visibility="hidden";
 })();
