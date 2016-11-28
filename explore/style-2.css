@@ -111,7 +111,7 @@ p#start
   animation: intro 2s ease-out;
 }
 
-/* the interesting 3D scrolling stuff */
+/* the interesting 3D scrolling stuff 
 #titles
 {
   position: absolute;
@@ -180,7 +180,7 @@ p#start
   animation: scroll 100s linear 1s infinite;
 }
 
-/* animation */
+/* animation 
 @-webkit-keyframes scroll {
   0% { top: 100%; }
   100% { top: -170%; }
@@ -247,4 +247,32 @@ p#start
 
 .top-layer{
 
+}
+*/
+
+
+
+
+.svg1, .svg2, .svg3, .svg4, .svg5, .svg6 {
+   fill: #ffffff;
+   position: relative;
+}
+
+.svg1:hover, .svg2:hover, .svg3:hover, .svg4:hover, .svg5:hover, .svg6:hover {
+  color: #aaaaaa;
+  fill: #aaaaaa;
+  display: block;
+}
+
+.appear1, .appear2, .appear3, .appear4, .appear5{
+    background:red;
+    display:none
+}
+.svg1:hover + .appear1, .svg2:hover + .appear2, .svg3:hover + .appear3, .svg4:hover + .appear4, .svg5:hover + .appear5 {
+    display:block;  
+}
+
+.top-layer{
+  position:fixed;
+  padding: 0px 0 0 15px;
 }
