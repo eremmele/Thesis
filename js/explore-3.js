@@ -1,8 +1,8 @@
 var holeSize = 100; // size of the black hole.
-var rotationDistance = 200; // distance of black hole from canvas center.
+var rotationDistance = 100; // 200 // distance of black hole from canvas center.
 var rotationSpeed = 1; // speed of black hole rotation.
 var spawnCount = 20;  // the amount of stars to spawn every frame.
-var rotationStep = 37;
+var rotationStep = 37; //37
 
 // ---------------------------------------------
 
@@ -12,7 +12,7 @@ var canvas = document.getElementById('c'),
     m = {},
     r = 0,
     accel = 1.01,
-    accel2 = 0.001,
+    accel2 = 0.00001,
     ratio = window.devicePixelRatio || 1,
     spawnPos = 0
 	
@@ -35,7 +35,7 @@ function createStars(n){
             x: m.x,
             y: m.y,
             r: 1,
-            speed: 1,
+            speed: 0.25, //1
             accel: accel,
             accel2: accel2,
             angle:  spawnPos

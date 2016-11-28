@@ -40,7 +40,11 @@
 
 </head>
 
-<body class="fade-in">
+<body>
+
+<div class="thumbnails">
+
+</div>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -81,11 +85,57 @@
 
 <!--//////////////////////////// Main Attraction //////////////////////////////////-->
 
-<!-- play/pause 
-    <button id='pause'>Pause</button>
-    <button id='continue'>Continue</button>
-    <br> -->
-<!-- actual content -->
+<!--thumbnails-->
+
+<div class="top-layer"><div id="titles"><div id="titlecontent">
+
+      <div class="svg1"><svg width="100" height="100"><circle cx="50" cy="50" r="20" /></svg></div>
+      <img src="https://www.placecage.com/200/300" class="appear1">
+
+      <div class="svg2"><svg width="100" height="100"><circle cx="50" cy="50" r="20" /></svg></div>
+      <img src="https://www.placecage.com/200/300" class="appear2">
+
+      <div class="svg3"><svg width="100" height="100"><circle cx="50" cy="50" r="20" /></svg></div>
+      <img src="https://www.placecage.com/200/300" class="appear3">
+
+      <div class="svg4"><svg width="100" height="100"><circle cx="50" cy="50" r="20" /></svg></div>
+      <img src="https://www.placecage.com/200/300" class="appear4">
+
+      <div class="svg5"><svg width="100" height="100"><circle cx="50" cy="50" r="20" /></svg></div>
+      <img src="https://www.placecage.com/200/300" class="appear5">
+
+</div></div></div>
+
+<!--<div class="top-layer">
+
+    <div id="intro">
+      <div id="introContent">
+
+        <a href="#"><div class="explore1-1">
+            <svg width="100" height="100"><circle cx="50" cy="50" r="40" /></svg>
+        </div></a>
+        <a href="#"><div class="explore1-2">
+            <svg width="100" height="100"><circle cx="50" cy="50" r="40" /></svg>
+        </div></a>
+        <a href="#"><div class="explore1-3">
+            <svg width="100" height="100"><circle cx="50" cy="50" r="40" /></svg>
+        </div></a>
+        <a href="#"><div class="explore1-4">
+            <svg width="100" height="100"><circle cx="50" cy="50" r="40" /></svg>
+        </div></a>
+        <a href="#"><div class="explore1-5">
+            <svg width="100" height="100"><circle cx="50" cy="50" r="40" /></svg>
+        </div></a>
+        <a href="#"><div class="explore1-6">
+            <svg width="100" height="100"><circle cx="50" cy="50" r="40" /></svg>
+        </div></a>
+
+<script>   var windowHeight = $('#intro').height();
+    var windowWidth = $('#intro').width(); </script>
+
+</div></div></div>-->
+
+<!-- background -->
     <canvas id="c"></canvas>
     
     <script src="js/explore.js"></script>
@@ -99,13 +149,74 @@
 
 <!--//////////////////////////////////////////////////////////////-->
 
-<script>setTimeout(function(){window.location.href='explore-2.html'},15000);</script>
+
   
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+     <!-- <span style="background:#000;color:#fff;"> Your browser doesn't support iframes. Download an iframe-compatible browser <a href="http://www.w3schools.com/TAgs/tag_iframe.asp" style="color:#fff;text-decoration:underline;">here</a>. </span>
+</iframe>-->
+
 </body>
 
+<!-- move to next thumbnail after viewing -->
+<script>
+    $('a.button').click(function(){
+        if (condition == 'true'){
+            function1(someVariable, function() {
+              function2(someOtherVariable);
+            });
+        }
+        else {
+            doThis(someVariable);
+        }
+    });
+
+
+    function function1(param, callback) {
+      ...do stuff
+      callback();
+    }
+</script>
+ 
+
+<!-- Move to next page when idle -->
+<script>
+idleTimer = null;
+idleState = false;
+idleWait = 60000;
+
+(function ($) {
+
+    $(document).ready(function () {
+    
+        $('*').bind('mousemove keydown scroll', function () {
+        
+            clearTimeout(idleTimer);
+                    
+            if (idleState == true) { 
+                
+                // Reactivated event
+                window.location.replace("http://overthere.space");            
+            }
+            
+            idleState = false;
+            
+            idleTimer = setTimeout(function () { 
+                
+                // Idle Event
+                window.location.replace("explore-2.html"); 
+
+                idleState = true; }, idleWait);
+        });
+        
+        $("body").trigger("mousemove");
+    
+    });
+}) (jQuery)
+
+</script>
+<!--<script>setTimeout(function(){window.location.href='explore-2.html'},15000);</script>-->
 
 <!--ADD GOOGLE ANALYTICS LATER -->
 

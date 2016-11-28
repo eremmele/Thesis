@@ -219,7 +219,47 @@
 
 		</script>
 
-		<script>setTimeout(function(){window.location.href='explore-6.html'},15000);</script>
-
 	</body>
+
+<!-- Move to next page when idle -->
+<script>
+idleTimer = null;
+idleState = false;
+idleWait = 8000;
+
+(function ($) {
+
+    $(document).ready(function () {
+    
+        $('*').bind('mousemove keydown scroll', function () {
+        
+            clearTimeout(idleTimer);
+                    
+            if (idleState == true) { 
+                
+                // Reactivated event
+                window.location.replace("http://overthere.space");            
+            }
+            
+            idleState = false;
+            
+            idleTimer = setTimeout(function () { 
+                
+                // Idle Event
+                window.location.replace("explore-6.html"); 
+
+                idleState = true; }, idleWait);
+        });
+        
+        $("body").trigger("mousemove");
+    
+    });
+}) (jQuery)
+
+</script>
+
+<!--<script>setTimeout(function(){window.location.href='explore-6.html'},15000);</script>-->
+
+<!--ADD GOOGLE ANALYTICS LATER -->
+
 </html>
