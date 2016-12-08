@@ -224,5 +224,21 @@ window.addEventListener('resize',function(){
 <!-- Move to next page after 20 seconds -->
 <script>setTimeout(function(){window.location.href='explore-1.html'},40000);</script>
 
+<!-- music -->
+<audio id="background_audio" src="assets/Treefingers.m4a" autoplay loop></audio> <!--controls-->
+
+<a href="#noscroll" id="mute">audio on/off</a>
+
+<script>
+  var audio = document.getElementById('background_audio');
+
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+</script>
+
 	</body>
 </html>

@@ -279,6 +279,24 @@ idleWait = 60000;
 
 <script>setTimeout(function(){window.location.href='explore-5.html'},1800000);</script>
 
+
+<!-- music-->
+
+<audio id="background_audio" src="assets/Treefingers.m4a" autoplay loop></audio> <!--controls-->
+
+<a href="#noscroll" id="mute">audio on/off</a>
+
+<script>
+  var audio = document.getElementById('background_audio');
+
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+</script>
+
 <!--ADD GOOGLE ANALYTICS LATER -->
 
 </html>
