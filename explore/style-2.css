@@ -255,20 +255,36 @@ p#start
 
 .top-layer{
   position:fixed;
-  padding: 10px 0 0 15px;
+margin: -5px -5px 0 0;
     font-weight: bold;
-  letter-spacing: 0.025em;
+    letter-spacing: .25rem;
+    text-transform:lowercase;
 }
 
 .top-layer {background:none;float:left;}
 .top-layer ul {text-align:center;}
 .top-layer ul li {float:left;display:inline;}
 .top-layer ul li:hover {color:#bbb;}
-.top-layer ul li a {display:block;padding:15px 25px;color:#bbb;}
+.top-layer ul li a {display:block;padding:8px 25px;color:#bbb;}
 .top-layer ul li a:hover {color:#fff;}
 .top-layer ul li ul {position:absolute;width:110px;background:none;}
 .top-layer ul li ul li {margin:0;padding:0;width:auto;}
-.top-layer ul li ul li a {display:block;color:#bbb;}
-.top-layer ul li ul li:hover a {color:#fff;}
+.top-layer ul li ul li a {display:block;color:#bbb;  
+  -webkit-transition: all .30s ease-in;
+  -moz-transition: all .30s ease-in;
+  -o-transition: all .30s ease-in;
+  transition: all .30s ease-in;}
+.top-layer ul li ul li:hover a {color:#fff;
+  letter-spacing: 15rem; /*5 before*/ 
+  transform: scale(1.1);
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out; 
+  cursor: pointer;}
 .top-layer ul li ul.fallback {display:none;}
 .top-layer ul li:hover ul.fallback {display:block;margin:0;}
+}
+
+
+

@@ -47,6 +47,17 @@
   });
   </script>
 
+  <script>
+  var audio = document.getElementById('background_audio');
+
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+</script>
+
 </head>
 
 <body>
@@ -99,12 +110,10 @@
       <div id="main">
         <ul>
           <li>
-            <a href="#">Link 1</a>
+            <a href="#">Black Holes</a>
             <ul class="fallback">
-              <li><a href="#">Sub-Link 1</a></li>
-              <li><a href="#">Sub-Link 2</a></li>
-              <li><a href="#">Sub-Link 3</a></li>
-              <li><a href="#">Sub-Link 4</a></li>
+              <li><a href="#">1</a><img src="assets/blackholes-23.svg" class="illustration" style="padding-bottom:10px"/></li>
+              <li><a href="#">2</a><img src="assets/blackholes-33.svg" class="illustration" style="padding-bottom:200px"/></li>
             </ul>
           </li> 
         </ul>
@@ -133,16 +142,7 @@
 
 <a href="#noscroll" id="mute">audio on/off</a>
 
-<script>
-  var audio = document.getElementById('background_audio');
 
-document.getElementById('mute').addEventListener('click', function (e)
-{
-    e = e || window.event;
-    audio.muted = !audio.muted;
-    e.preventDefault();
-}, false);
-</script>
 
 
   
