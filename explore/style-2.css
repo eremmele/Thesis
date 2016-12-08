@@ -253,26 +253,22 @@ p#start
 
 
 
-.svg1, .svg2, .svg3, .svg4, .svg5, .svg6 {
-   fill: #ffffff;
-   position: relative;
-}
-
-.svg1:hover, .svg2:hover, .svg3:hover, .svg4:hover, .svg5:hover, .svg6:hover {
-  color: #aaaaaa;
-  fill: #aaaaaa;
-  display: block;
-}
-
-.appear1, .appear2, .appear3, .appear4, .appear5{
-    background:red;
-    display:none
-}
-.svg1:hover + .appear1, .svg2:hover + .appear2, .svg3:hover + .appear3, .svg4:hover + .appear4, .svg5:hover + .appear5 {
-    display:block;  
-}
-
 .top-layer{
   position:fixed;
-  padding: 0px 0 0 15px;
+  padding: 10px 0 0 15px;
+    font-weight: bold;
+  letter-spacing: 0.025em;
 }
+
+.top-layer {background:none;float:left;}
+.top-layer ul {text-align:center;}
+.top-layer ul li {float:left;display:inline;}
+.top-layer ul li:hover {color:#bbb;}
+.top-layer ul li a {display:block;padding:15px 25px;color:#bbb;}
+.top-layer ul li a:hover {color:#fff;}
+.top-layer ul li ul {position:absolute;width:110px;background:none;}
+.top-layer ul li ul li {margin:0;padding:0;width:auto;}
+.top-layer ul li ul li a {display:block;color:#bbb;}
+.top-layer ul li ul li:hover a {color:#fff;}
+.top-layer ul li ul.fallback {display:none;}
+.top-layer ul li:hover ul.fallback {display:block;margin:0;}
