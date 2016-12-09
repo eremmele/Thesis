@@ -283,8 +283,15 @@ margin: -5px -5px 0 0;
   transition: all 1s ease-out; 
   cursor: pointer;}
 .top-layer ul li ul.fallback {display:none;}
-.top-layer ul li:hover ul.fallback {display:block;margin:0;}
+.top-layer ul li:hover ul.fallback {display:block;margin:0 0 0 23px;}
 }
 
+.pulsate {
+  animation: blinker 1s linear infinite;
+  -webkit-animation: blinker 1s linear infinite;
+}
 
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
 
